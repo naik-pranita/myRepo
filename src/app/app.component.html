@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <app-nav> </app-nav>
+    <form action="" #f="ngForm" method="POST" role="form" name="ngForm" (ngSubmit)="addMe(f.value)" autocomplete="off">
+        <legend>Form title</legend>
+        <div class="form-group">
+            <input type="text" name="appname" [(ngModel)]="name" placeholder="Add item" id="title" class="form-control" required/>
+        </div>
+        <div class="form-group text-center">
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-md btn-primary">Add Me +</button>
+                <button type="reset" class="btn btn-md btn-default" (click)="resetList()">Reset <span class="glyphicon glyphicon-repeat"></span></button>
+            </div>
+        </div>
+    </form>
+    <router-outlet></router-outlet>
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let item of nameList; let i = index">{{item | uppercase}} <span class="glyphicon pull-right glyphicon-remove"  (click) = "removeItem(i)" ></span></li>
+    </ul>
+</div>
