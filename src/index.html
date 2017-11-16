@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>DemoApp</title>
-  <base href="/">
+  <base href="/mysite">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/flatly/bootstrap.min.css">
@@ -13,7 +13,60 @@
 <body>
   <div class="container">
     <app-root></app-root>
+
+    <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button>
   </div>
+  <script>
+
+    function checkLoginState() {
+
+      FB.login(function (response) {
+        console.log('login response', response)
+      }, { scope: 'email,user_likes,user_birthday,user_events,user_work_history' });
+      // FB.getLoginStatus(function (response) {
+      //   statusChangeCallback(response);
+      // });
+    }
+
+    // var statusChangeCallback = function (response) {
+    //   console.log("statusChangeCallback", response);
+    // };
+
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '293839247777587',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v2.10'
+      });
+      // FB.AppEvents.logPageView();
+      FB.getLoginStatus(function (response) {
+        console.log("getLoginStatus", response)
+        if (response.status === 'connected') {
+          console.log("the user is logged in and has authenticated your app", response);
+          var uid = response.authResponse.userID;
+          var accessToken = response.authResponse.accessToken;
+          FB.api('/me/', 'get', { access_token: accessToken, fields: 'id,name,gender,cover,email,birthday,likes,work,groups,permissions,age_range ' }, function (response) {
+            console.log('id,name,gender,cover,email,birthday,likes,work,groups,permissions,age range ', response);
+          });
+        } else if (response.status === 'not_authorized') {
+          console.log("the user is logged in to Facebook, but has not authenticated your app")
+        } else {
+          console.log("the user isn't logged in to Facebook.")
+        }
+      });
+
+    };
+
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) { return; }
+      js = d.createElement(s); js.id = id;
+      js.src = "https://connect.facebook.net/en_US/sdk.js";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 
 </html>
