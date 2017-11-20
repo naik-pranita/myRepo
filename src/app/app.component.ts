@@ -4,9 +4,10 @@ import { NgModel, NgForm } from '@angular/forms';
 @Component({
   moduleId: module.id,
   selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styles: [],
+  template: '<router-outlet></router-outlet>',
+  styleUrls: ['./app.css']
 })
+
 export class AppComponent {
   title = 'app';
   name = '';
