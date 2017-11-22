@@ -1,0 +1,9 @@
+.card {
+    background-color: #FFF;
+    margin: 1em 0.5em;
+    min-height: 15em;
+}
+
+.card-block {
+    padding: 1em;
+}
