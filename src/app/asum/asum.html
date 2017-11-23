@@ -3,48 +3,51 @@
     <div class="row">
         <app-nav></app-nav>
     </div>
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-block">
-                    <h3 class="card-title">Payments</h3>
-                    <p class="card-text">$200 Payment Due.</p>
-                    <a href="#" class="btn btn-primary">Make a payment now.</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-block">
-                    <h3 class="card-title">Statements</h3>
-                    <p class="card-text">View past statements</p>
-                    <a href="#" class="btn btn-primary">View my statements</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-block">
-                    <h3 class="card-title">Rewards & Benefits</h3>
-                    <p class="card-text">All your reward details</p>
-                    <a href="#" class="btn btn-primary">My Rewards</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="card">
-                <div class="card-block">
-                    <h3 class="card-title">Special Offers</h3>
-                    <p class="card-text">Customized offers just for you!</p>
-                    <button (click)="showOffers=true" class="btn btn-primary">Show offers</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div *ngIf="showOffers">
-        <offers-app></offers-app>
-    </div>
-
+    <my-slide-panel [activePane]="isLeftVisible ? 'left' : 'right'">
+        <div leftPane>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">Payments</h3>
+                            <p class="card-text">$200 Payment Due.</p>
+                            <a href="#" class="btn btn-primary">Make a payment now.</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">Statements</h3>
+                            <p class="card-text">View past statements</p>
+                            <a href="#" class="btn btn-primary">View my statements</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">Rewards & Benefits</h3>
+                            <p class="card-text">All your reward details</p>
+                            <a href="#" class="btn btn-primary">My Rewards</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card">
+                        <div class="card-block">
+                            <h3 class="card-title">Special Offers</h3>
+                            <p class="card-text">Customized offers just for you!</p>
+                            <button (click)="isLeftVisible=false" class="btn btn-primary">Show offers</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div rightPane>
+                <span (click)="isLeftVisible=true" class="fa fa-arrow-left"> Back to Account Summary</span>
+            <offers-app></offers-app>
+        </div>
+    </my-slide-panel>
 </div>
-

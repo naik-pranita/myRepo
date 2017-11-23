@@ -8,10 +8,12 @@ import { DataService } from "../services/app.service";
 })
 
 export class ASUMComponent implements OnInit {
+    userInfo;
+    isLeftVisible = true;
+    
     constructor(private dataService: DataService) { }
 
-    userInfo;
     ngOnInit() {
         this.userInfo = this.dataService.getUserInfo();
-     }
+    }
 }
