@@ -36,9 +36,15 @@
                 <div class="card-block">
                     <h3 class="card-title">Special Offers</h3>
                     <p class="card-text">Customized offers just for you!</p>
-                    <a href="#" class="btn btn-primary">Show offers</a>
+                    <button (click)="showOffers=true" class="btn btn-primary">Show offers</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <div *ngIf="showOffers">
+        <offers-app></offers-app>
+    </div>
+
 </div>
+

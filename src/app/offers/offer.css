@@ -1,0 +1,12 @@
+.container {
+    width: 1123px;
+    background-color: #fff;
+    padding: 43px;
+}
+
+.heading {
+    padding-bottom: 34px;
+    color: #333;
+    font-size: 20px;
+    font-weight: bold;
+}

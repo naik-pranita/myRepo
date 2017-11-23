@@ -7,12 +7,13 @@ import { AppRoutingModule, RoutableComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavComponent } from './nav/nav.component';
 import { DataService } from "./services/app.service";
-
+import { OfferComponent } from "./offers/offers.component";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
+    OfferComponent,
     RoutableComponents
   ],
   imports: [
