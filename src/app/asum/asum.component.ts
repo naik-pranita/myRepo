@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService } from "../services/app.service";
+
 
 @Component({
     selector: 'asum',
@@ -8,12 +8,12 @@ import { DataService } from "../services/app.service";
 })
 
 export class ASUMComponent implements OnInit {
-    userInfo;
-    isLeftVisible = true;
     
-    constructor(private dataService: DataService) { }
+    isLeftVisible = true;
 
-    ngOnInit() {
-        this.userInfo = this.dataService.getUserInfo();
-    }
+    constructor() { }
+
+    ngOnInit() {}
+        
+
 }

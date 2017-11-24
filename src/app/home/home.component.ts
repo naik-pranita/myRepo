@@ -9,7 +9,7 @@ import { DataService } from "../services/app.service";
     styleUrls: ['./home.css', './css/form-elements.css']
 })
 
-export class HomeComponent {
+export class HomeComponent{
     isLeftVisible = true;
 
     constructor(private dataService: DataService, private router: Router) { }

@@ -54,7 +54,7 @@
         </div>
         <div rightPane>
             <span (click)="isLeftVisible=true" class="fa fa-arrow-left"> Back to Account Summary</span>
-            <offers-app></offers-app>
+            <offers-app [userInfo]="userInfo"></offers-app>
         </div>
     </my-slide-panel>
 </div>

@@ -10,14 +10,14 @@ var offers = {
                 "heading":"airline",
                 "description":"description"},
     ],
-    "rishabh":
-    [{"image":"../../assets/offer-img/airline.jpg",
+    "pranita":
+    [{"image":"../../assets/offer-img/electric.jpg",
             "heading":"airline",
             "description":"description"},
-    {"image":"../../assets/offer-img/airline.jpg",
+    {"image":"../../assets/offer-img/food.jpg",
             "heading":"airline",
             "description":"description"},
-    {"image":"../../assets/offer-img/airline.jpg",
+    {"image":"../../assets/offer-img/furniture.jpg",
             "heading":"airline",
             "description":"description"},
 ],

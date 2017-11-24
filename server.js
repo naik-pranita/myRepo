@@ -7,7 +7,8 @@ var express           =     require('express')
 , bodyParser        =     require('body-parser')
 , config            =     require('./configuration/config')
 , mysql             =     require('mysql')
-, app               =     express();
+, app               =     express(),
+cors = require('cors');
 
 //Define MySQL parameter in Config.js file.
 var connection = mysql.createConnection({
@@ -67,6 +68,7 @@ function(accessToken, refreshToken, profile, done) {
 ));
 
 
+app.use(cors());
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(cookieParser());
