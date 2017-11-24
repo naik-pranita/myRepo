@@ -10,6 +10,7 @@ import { NavComponent } from './nav/nav.component';
 import { DataService } from "./services/app.service";
 import { OfferComponent } from "./offers/offers.component";
 import { SlidePanelComponent } from './slide-panel/slide-panel.component';
+import { CarouselComponent } from './home-page-carousel/carousel.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { SlidePanelComponent } from './slide-panel/slide-panel.component';
     NavComponent,
     OfferComponent,
     SlidePanelComponent,
-    RoutableComponents
+    RoutableComponents,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,

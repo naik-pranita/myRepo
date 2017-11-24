@@ -3,7 +3,8 @@
 }
 
 .setup-online a {
-	color: #fff;
+	color: #de615e;
+    cursor: pointer;
 }
 
 
@@ -90,7 +91,7 @@ img { max-width: 100%; }
 /***** Top content *****/
 
 .inner-bg {
-    padding: 100px 0 170px 0;
+    padding: 15px 0 170px 0;
 }
 
 .top-content .text {
@@ -173,7 +174,7 @@ img { max-width: 100%; }
 }
 
 .social-login-buttons {
-	margin-top: 25px;
+	margin: 11%;
 }
 
 
@@ -195,3 +196,38 @@ img { max-width: 100%; }
 
 }
 
+.logo {
+	float: left;
+	margin-top: 32px;
+	width: 230px;
+}
+
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.back-to-login {
+	color: #de615e;
+	cursor: pointer;
+}
+
+.facebook {
+	background-color: #4267b2;
+	
+}
+.twitter {
+	background-color: #1da1f2;
+}
+
+.google {
+	background-color: #dd4b39;
+}
