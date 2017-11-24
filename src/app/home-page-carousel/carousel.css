@@ -100,19 +100,19 @@ Image credits: unsplash.com
 .fade-carousel .slides .slide-1, 
 .fade-carousel .slides .slide-2,
 .fade-carousel .slides .slide-3 {
-  height: 50vh;
+  height: 52vh;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
 }
 .fade-carousel .slides .slide-1 {
-  background-image: url(../../assets/img/nfl.jpg); 
+  background-image: url(../../assets/img/apple.jpg); 
 }
 .fade-carousel .slides .slide-2 {
   background-image: url(../../assets/img/uber.jpg);
 }
 .fade-carousel .slides .slide-3 {
-  background-image: url(../../assets/img/apple.jpg);
+  background-image: url(../../assets/img/nfl.jpg);
 }
 
 /********************************/
