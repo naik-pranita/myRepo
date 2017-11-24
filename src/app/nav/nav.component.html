@@ -22,13 +22,13 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#">Link</a></li>
-                <li class="dropdown">
+                <li class="dropdown text-center">
                     <a href="#" (click)="collapseDropdown = !collapseDropdown"><span class="hidden-md">Settings </span><span class="visible-md glyphicon glyphicon-cog"></span></a>
                     <ul class="dropdown-menu" [ngbCollapse]="collapseDropdown">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-comment"></span> Feedback</a></li>
+                        <li><a href="#"><span class="glyphicons glyphicons-user-conversation"></span> Contact us</a></li>
+                        <li><a href="#"><span class="glyphicon glyphicon-off"></span> Logout</a></li>
                     </ul>
                 </li>
             </ul>

@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { OnboardComponent } from "./onboard/onboard.component";
 import { ASUMComponent } from "./asum/asum.component";
+import { AuthGuard } from "./services/auth-guard.service";
 
 const routes: Routes = [
   {
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: 'accountSummary',
     component: ASUMComponent,
+    // canActivate: [AuthGuard],
     children: []
   },
   {

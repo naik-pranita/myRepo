@@ -1,4 +1,7 @@
 import { Component } from "@angular/core";
+import { Router } from "@angular/router";
+import { DataService } from "../services/app.service";
+
 
 @Component({
     selector: 'home-app',
@@ -7,5 +10,10 @@ import { Component } from "@angular/core";
 })
 
 export class HomeComponent {
-    
+    constructor(private dataService: DataService, private router: Router) { }
+
+    login(form) {
+        this.dataService.saveUserInfo(form);
+        this.router.navigate(['accountSummary']);
+    }
 }
