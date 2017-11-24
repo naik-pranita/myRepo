@@ -1,7 +1,14 @@
 <!-- Welcome to ASUM, {{userInfo.f1-first-name}}! -->
+
+<div class="container">
+    <div class="logo">
+        <img src='../../assets/logo/logo.png'>
+    </div>
+</div>
+
 <div class="container app-container">
     <div class="row">
-        <app-nav></app-nav>
+        <!-- <app-nav></app-nav> -->
     </div>
 
     <my-slide-panel [activePane]="isLeftVisible ? 'left' : 'right'">
@@ -46,7 +53,7 @@
             </div>
         </div>
         <div rightPane>
-                <span (click)="isLeftVisible=true" class="fa fa-arrow-left"> Back to Account Summary</span>
+            <span (click)="isLeftVisible=true" class="fa fa-arrow-left"> Back to Account Summary</span>
             <offers-app></offers-app>
         </div>
     </my-slide-panel>
