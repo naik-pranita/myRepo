@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import mockOffers from "../../../configuration/offers";
 
 
 @Component({
@@ -8,7 +9,9 @@ import { Component } from "@angular/core";
 })
 
 export class OfferComponent {
+    private offers;
 
-    constructor() {}
-
+    constructor() {
+        this. offers = mockOffers["default"];
+    }
 }
