@@ -1,97 +1,14 @@
 <div class="container" id="tourpackages-carousel">
     
       <div class="text-center heading">Top Offers based on your interests</div>
-      <div class="col-xs-12 col-sm-6 col-md-3">
+      <div *ngFor=" let offer of offers" class="col-xs-12 col-sm-6 col-md-3">
         <div class="thumbnail">
-          <img src="../../assets/offer-img/airline.jpg" alt="">
+          <img src={{offer.image}} alt="">
             <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
+              <h4>{{offer.heading}}</h4>
+              <p>{{offer.description}}</p>
               <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
           </div>
         </div>
       </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/furniture.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/hotel.jpeg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/food.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/salon.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/shop.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/movie.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-xs-12 col-sm-6 col-md-3">
-        <div class="thumbnail">
-          <img src="../../assets/offer-img/electric.jpg" alt="">
-            <div class="caption">
-              <h4>Thumbnail label</h4>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-              <p><a href="#" class="btn btn-info btn-xs" role="button">Button</a> <a href="#" class="btn btn-default btn-xs" role="button">Button</a></p>
-          </div>
-        </div>
-      </div>
-      
-    
   </div><!-- End container -->
