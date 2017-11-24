@@ -41,7 +41,7 @@ var offers = {
             "description":"You are eligible to get 30% discount on holiday booking at   makemytrip.com. Coupon code - HOLIDAY30"},
         {"image":"../../assets/offer-img/movie.jpeg",
             "heading":"CINE MAX",
-            "description":"You are eligible to get 50% discount on hotel booking at bookmyshow.com. Coupon code - BOOKMOVIE20"},
+            "description":"You are eligible to get 50% discount on hotel booking at bookmyshow.com. Coupon code - BOOKMOVIETKT20"},
 
         ],
     "ajay":
