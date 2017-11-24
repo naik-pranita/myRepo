@@ -10,6 +10,8 @@ import { DataService } from "../services/app.service";
 })
 
 export class HomeComponent {
+    isLeftVisible = true;
+
     constructor(private dataService: DataService, private router: Router) { }
 
     login(form) {

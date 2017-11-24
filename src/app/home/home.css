@@ -3,7 +3,8 @@
 }
 
 .setup-online a {
-	color: #fff;
+	color: #de615e;
+    cursor: pointer;
 }
 
 
@@ -173,7 +174,7 @@ img { max-width: 100%; }
 }
 
 .social-login-buttons {
-	margin-top: 25px;
+	margin: 11%;
 }
 
 
@@ -201,3 +202,32 @@ img { max-width: 100%; }
 	width: 230px;
 }
 
+
+.float-right {
+	float: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.back-to-login {
+	color: #de615e;
+	cursor: pointer;
+}
+
+.facebook {
+	background-color: #4267b2;
+	
+}
+.twitter {
+	background-color: #1da1f2;
+}
+
+.google {
+	background-color: #dd4b39;
+}

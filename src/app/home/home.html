@@ -1,6 +1,7 @@
-
 <div class="container">
-    <div class="logo"> <img src='../../assets/logo/logo.png'></div>
+    <div class="logo">
+        <img src='../../assets/logo/logo.png'>
+    </div>
 
 </div>
 
@@ -8,43 +9,157 @@
 <div class="top-content">
     <div class="inner-bg">
         <div class="container">
-
-            
-            <div class="row">
+            <my-slide-panel [activePane]="isLeftVisible ? 'left' : 'right'">
+                <div class="row" leftPane>
                     <div class="col-sm-8">
-                            <carousel-app></carousel-app>
+                        <carousel-app></carousel-app>
                     </div>
-                <div class="col-sm-4">
-                    <div class="form-top">
-                        <div class="form-top-left">
-                            <h3>Login to our site</h3>
-                            <p>Enter your username and password to log on:</p>
-                        </div>
-                        <div class="form-top-right">
-                            <i class="fa fa-lock"></i>
+                    <div class="col-sm-4">
+                        <div>
+                            <div class="form-top">
+                                <div class="form-top-left">
+                                    <h3>Login to our site</h3>
+                                    <p>Enter your username and password to log on:</p>
+                                </div>
+                                <div class="form-top-right">
+                                    <i class="fa fa-lock"></i>
+                                </div>
+                            </div>
+                            <div class="form-bottom">
+                                <form action="" #f="ngForm" method="POST" class="f1" role="form" name="ngForm" (ngSubmit)="login(f.value)" autocomplete="off">
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-username">Username</label>
+                                        <input type="text" [(ngModel)]="username" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="sr-only" for="form-password">Password</label>
+                                        <input type="password" [(ngModel)]="password" name="password" placeholder="Password..." class="form-password form-control"
+                                            id="form-password">
+                                    </div>
+                                    <button type="submit" class="btn">Sign in!</button>
+                                    <div class="text-center setup-online">
+                                        <a (click)="isLeftVisible=false">Setup online access</a>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-bottom">
-                        <form action="" #f="ngForm" method="POST" class="f1" role="form" name="ngForm" (ngSubmit)="login(f.value)" autocomplete="off">
 
-                            <div class="form-group">
-                                <label class="sr-only" for="form-username">Username</label>
-                                <input type="text" [(ngModel)]="username" name="username" placeholder="Username..." class="form-username form-control" id="form-username">
-                            </div>
-                            <div class="form-group">
-                                <label class="sr-only" for="form-password">Password</label>
-                                <input type="password" [(ngModel)]="password" name="password" placeholder="Password..." class="form-password form-control" id="form-password">
-                            </div>
-                            <button type="submit" class="btn">Sign in!</button>
-                            <div class="text-center setup-online">
-                                <a [routerLink]="['/onboard']">Setup online access</a>
-                            </div>
+                </div>
+                <div class="row" rightPane>
+                    <div class="col-sm-12">
+                        <div>
+                            <div class="top-content">
+                                <div class="container wizard">
+                                    <div class="row">
+                                        <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 form-box">
+                                            <form action="" #f="ngForm" method="POST" class="f1" role="form" name="ngForm" (ngSubmit)="login(f.value)" autocomplete="off">
+                                                <h5 class="back-to-login">
+                                                    <span (click)="isLeftVisible=true" class="fa text-left col-xs-12 fa-arrow-left"> Back to Login</span>
+                                                    <!-- <a type="button" class="btn text-left col-xs-12 btn-previous" (click)="isLeftVisible=true">Back to Login</a> -->
+                                                </h5>
+                                                <h3>Register To Our App</h3>
+                                                <p>Fill in the form to get instant access</p>
+                                                <div class="f1-steps">
+                                                    <div class="f1-progress">
+                                                        <div class="f1-progress-line" data-now-value="16.66" data-number-of-steps="3" style="width: 16.66%;"></div>
+                                                    </div>
+                                                    <div class="f1-step active">
+                                                        <div class="f1-step-icon">
+                                                            <i class="fa fa-user"></i>
+                                                        </div>
+                                                        <p>about</p>
+                                                    </div>
+                                                    <div class="f1-step">
+                                                        <div class="f1-step-icon">
+                                                            <i class="fa fa-key"></i>
+                                                        </div>
+                                                        <p>account</p>
+                                                    </div>
+                                                    <div class="f1-step">
+                                                        <div class="f1-step-icon">
+                                                            <i class="fa fa-twitter"></i>
+                                                        </div>
+                                                        <p>social</p>
+                                                    </div>
+                                                </div>
 
-                        </form>
+                                                <fieldset>
+                                                    <h4>Tell us who you are:</h4>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-first-name">First name</label>
+                                                        <input type="text" [(ngModel)]="firstName" name="f1-first-name" placeholder="First name..." class="f1-first-name form-control"
+                                                            id="f1-first-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-last-name">Last name</label>
+                                                        <input type="text" [(ngModel)]="lastName" name="f1-last-name" placeholder="Last name..." class="f1-last-name form-control"
+                                                            id="f1-last-name">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-about-yourself">About yourself</label>
+                                                        <textarea [(ngModel)]="about" name="f1-about-yourself" placeholder="About yourself..." class="f1-about-yourself form-control"
+                                                            id="f1-about-yourself"></textarea>
+                                                    </div>
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn float-right btn-next">Next</button>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset>
+                                                    <h4>Set up your account:</h4>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-email">Email</label>
+                                                        <input type="text" [(ngModel)]="email" name="f1-email" placeholder="Email..." class="f1-email form-control" id="f1-email">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-password">Password</label>
+                                                        <input type="password" name="f1-password" placeholder="Password..." class="f1-password form-control" id="f1-password">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="sr-only" for="f1-repeat-password">Repeat password</label>
+                                                        <input type="password" name="f1-repeat-password" placeholder="Repeat password..." class="f1-repeat-password form-control"
+                                                            id="f1-repeat-password">
+                                                    </div>
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn btn-previous">Previous</button>
+                                                        <button type="button" class="btn btn-next">Next</button>
+                                                    </div>
+                                                </fieldset>
+
+                                                <fieldset>
+                                                    <h4>Get the best out of your social life!</h4>
+                                                    <p>
+                                                        Enroll in our offers program to get exclusive offers customised just for you. All you need to do is login with any of the
+                                                        following social media platforms.
+                                                    </p>
+                                                    <div class="social-login-buttons">
+                                                        <a class="btn facebook btn-link-2" href="http://localhost:8000/auth/facebook">
+                                                            <i class="fa fa-facebook"></i> Facebook
+                                                        </a>
+                                                        <a class="btn twitter btn-link-2" href="#">
+                                                            <i class="fa fa-twitter"></i> Twitter
+                                                        </a>
+                                                        <a class="btn google btn-link-2" href="#">
+                                                            <i class="fa fa-google-plus"></i> Google Plus
+                                                        </a>
+                                                    </div>
+                                                    <div class="f1-buttons">
+                                                        <button type="button" class="btn btn-previous">Previous</button>
+                                                        <button type="submit" s class="btn btn-submit">Submit</button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-            </div>
+            </my-slide-panel>
         </div>
     </div>
-
 </div>
