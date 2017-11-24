@@ -2,7 +2,6 @@
     <div class="logo">
         <img src='../../assets/logo/logo.png'>
     </div>
-
 </div>
 
 
@@ -18,7 +17,7 @@
                         <div>
                             <div class="form-top">
                                 <div class="form-top-left">
-                                    <h3>Login to our site</h3>
+                                    <h3>Cardmember login</h3>
                                     <p>Enter your username and password to log on:</p>
                                 </div>
                                 <div class="form-top-right">
@@ -37,14 +36,23 @@
                                             id="form-password">
                                     </div>
                                     <button type="submit" class="btn">Sign in!</button>
-                                    <div class="text-center setup-online">
-                                        <a (click)="isLeftVisible=false">Setup online access</a>
-                                    </div>
                                 </form>
                             </div>
                         </div>
                     </div>
-
+                    <div class="col-sm-4 setup">
+                            <div class="form-bottom">
+        
+                                <div class="text-center setup-online">
+                                        <div class="form-left">
+                                            <h4>New cardmembers</h4>
+                                                <p>View, manage account online</p>
+                                            </div>
+                                            <button (click)="isLeftVisible=false" class="btn">Setup online access</button>
+                                </div>
+        
+                            </div>
+                        </div>
                 </div>
                 <div class="row" rightPane>
                     <div class="col-sm-12">
