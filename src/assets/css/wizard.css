@@ -45,7 +45,7 @@ img { max-width: 100%; }
 
 
 /***** Top menu *****/
-
+/* 
 .navbar {
 	padding-top: 10px;
 	background: #333;
@@ -80,7 +80,7 @@ ul.navbar-nav {
 	width: 162px;
 	background: url(../img/logo.png) left center no-repeat;
 	text-indent: -99999px;
-}
+} */
 
 
 /***** Top content *****/
