@@ -49,6 +49,12 @@
                             <h3 class="card-title">Special Offers</h3>
                             <p class="card-text">Customized offers just for you!</p>
                             <button (click)="isLeftVisible=false" class="btn btn-primary">Show offers</button>
+                            <div class="row" *ngIf="!userInfo">
+                                    <a class="btn facebook btn-link-2" href="http://localhost:8000/auth/facebook">
+                                        <i class="fa fa-facebook"></i> Facebook
+                                    </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
