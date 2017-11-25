@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { OnboardComponent } from "./onboard/onboard.component";
+import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { ASUMComponent } from "./asum/asum.component";
 import { AuthGuard } from "./services/auth-guard.service";
 
@@ -14,6 +15,11 @@ const routes: Routes = [
   {
     path: 'onboard',
     component: OnboardComponent,
+    children: []
+  },
+  {
+    path: 'forgotPassword',
+    component: ForgotPasswordComponent,
     children: []
   },
   {
@@ -39,6 +45,7 @@ export class AppRoutingModule { }
 export const RoutableComponents = [
   HomeComponent,
   OnboardComponent,
-  ASUMComponent
+  ASUMComponent,
+  ForgotPasswordComponent
 ]
 

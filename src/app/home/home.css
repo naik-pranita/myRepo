@@ -234,7 +234,11 @@ img { max-width: 100%; }
 .setup {
 	float: right;
 }
-	
+
 .form-bottom {
 	padding: 7px 25px 30px 25px;
+}
+
+.f1-password, .f1-repeat-password {
+    border: 1px solid #ccc !important;
 }

@@ -18,4 +18,8 @@ export class HomeComponent{
         this.dataService.saveUserInfo(form);
         this.router.navigate(['accountSummary']);
     }
+
+    forgotPassword() {
+        this.router.navigate(['forgotPassword']);
+    }
 }
